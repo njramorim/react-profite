@@ -1,0 +1,22 @@
+@import 'reset',  
+	'settings',
+	'typo',
+	'custom',
+	'containers/footer',
+	'containers/gallery',
+	'containers/header',
+	'containers/highlights',
+	'components/banner',
+	'components/countries',
+	'components/menu',
+	'components/navigator',
+	'components/product',
+	'components/search';   
+  
+body {
+	color: #000000;
+	font-family: 'Open Sans';	
+	min-width:  $banner-width;
+}
+
+

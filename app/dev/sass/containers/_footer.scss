@@ -1,0 +1,92 @@
+footer {
+	background-image: url('../static/images/bg-footer.jpg');
+	display: block;
+	font-size: 14px;	
+	text-align: left;
+	width: 100%;
+
+	> div {
+		margin: 0 auto;
+		padding: 55px 90px 65px 90px;
+		width: 940px;
+	}
+
+	dl {
+		color: darken(#7d7d7d, 15%);
+		display: inline-block; 
+		line-height: 24px;
+		margin-right: 35px;
+
+		dt {
+			display:inline-block;
+			width: 48px;
+			overflow: hidden;
+			text-indent: -9999px;
+			vertical-align: top;
+			height: 40px;
+		}
+
+		&.rj dt {
+			background-image: url('../static/images/icons/icone_rj.png');
+		}
+
+		&.sp dt {
+			background-image: url('../static/images/icons/icone_sp.png');
+		}
+
+		dd {
+			display: inline-block;
+			margin:10px 0px 0px 5px;
+			vertical-align: top;
+		}
+
+		a {
+			color: #000000;
+			font-weight: bold;
+		}
+	}
+
+	nav {
+		display: inline-block;
+		font-size: 12px;
+		line-height: 16px;
+		margin-left: 45px;
+		text-transform: uppercase;
+		vertical-align: top;
+
+		li {
+			background-color: #fac437;
+			background-image: url('../static/images/icons/icone_contato.png');
+			background-position: 12px 13px;
+			background-repeat: no-repeat;
+			display: block;
+			height: 40px;
+			line-height: 42px;
+			width: 180px; 
+
+			&:hover {
+				opacity: 0.8;
+			}
+
+			a {
+				padding-left: 40px;
+				display: block;
+			}
+
+			~ li {
+				background-image: url('../static/images/icons/icone_consultor.png');
+				background-position: 12px 8px;
+				margin-top: 5px;
+				line-height: 15px;
+
+				a {
+					padding-top:5px;
+				}
+			}
+		}
+
+		span {
+			font-weight: bold;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+.gallery {
+	display: block;
+	height: $gallery-height;
+	margin:0 auto 80px auto;
+	overflow: hidden;
+	padding: 0px $app-margin 0px $app-margin;
+	position: relative;
+	text-align: center;
+	width: $app-width;
+
+	.productArea {
+		height: 100%;
+		width: (100% * 2);
+
+		> li {
+			border-left:1px solid #e1e1e1;
+			display: inline-block;
+			height: 100%;
+			vertical-align: top;
+			width: (25% / 2);
+		}
+	}
+}

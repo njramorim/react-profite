@@ -1,0 +1,39 @@
+.search {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+
+	input[type=search] {
+		background-color: #fac437;
+		border-radius: $app-border-radius;
+		height: 30px;
+		line-height: 30px;
+		padding: 0px 15px 0px 50px;
+		width: 350px;
+	}
+
+	button {
+		background-color: #000000;
+		background-image: url('../static/images/icons/icone_pesquisa.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: 18px 18px;
+		border-radius: $app-border-radius;
+		height: 30px;
+		left:0;
+		overflow: hidden;
+		position:absolute;
+		text-indent: -9999px;
+		top:0;
+		transition: opacity 0.12s;
+		width: 40px;
+
+		&:hover {
+			opacity: 0.85;
+		}
+
+		&:active {
+			opacity:0.75;
+		}
+	}
+}

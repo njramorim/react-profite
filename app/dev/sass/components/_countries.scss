@@ -1,0 +1,53 @@
+.countries {
+	display: inline-block;
+	float: right;
+	text-align: center;
+	transform: translateY(20%);
+}
+
+.countries > ul {
+	> li {
+		display: inline-block;
+		margin: 0px 5px 5px 5px;
+
+		> a {
+			background-repeat: no-repeat;
+			background-size: cover;
+			display: block;
+			height: 17px;
+			overflow: hidden;
+			text-indent: -9999px;
+			width:25px;
+		}
+
+		&:first-child > a {
+			background-image: url('../static/images/icons/bandeira1.png');
+		}
+
+		&:nth-child(2) > a {
+			background-image: url('../static/images/icons/bandeira2.png');
+		}
+
+		&:nth-child(3) > a {
+			background-image: url('../static/images/icons/bandeira3.png');
+		}
+	}
+}
+
+.countries > h2 {
+	color: #00aff0;
+	font-family: 'Myriad Pro';
+	font-size: 18px;
+	line-height: 25px;
+
+	a {		
+		background-image: url('../static/images/icons/skype.png');
+		background-position: left bottom;
+		background-repeat: no-repeat;
+		background-size: 24px 24px;
+		display: inline-block;
+		height: 25px;
+		line-height: 30px;
+		padding-left: 25px + 3px;
+	}
+}

@@ -1,0 +1,135 @@
+.navigator {
+	height: 100%;
+	left:0;
+	pointer-events: none;
+	position: absolute;
+	top:0;
+	width: 100%;
+	z-index: 5;
+}
+
+.navigator .arrows {
+	left:50%;
+	margin-top: -15px;
+	position: absolute;
+	top: 50%;
+	transform: translateX(-50%);
+	width: $app-width;
+
+	button {
+		background-color: transparent;
+		background-repeat: no-repeat;
+		height: 16px;
+		overflow: hidden;
+		pointer-events: initial;
+		text-indent: -9999px;
+		transition: opacity 0.175s ease-in;
+		width: 15px;
+
+		&:first-child {
+			background-image: url('../static/images/icons/seta_esquerda.png');
+			float: left;
+		}
+		&:last-child {
+			background-image: url('../static/images/icons/seta_direita.png');
+			float: right;
+		}
+
+		&:hover {
+			opacity: 0.85;
+		}
+	}
+}
+
+.navigator.products .arrows{
+	&:before,
+	&:after {
+		background-color: #fffffF;
+    content: '';
+    height: 417px;
+    pointer-events: none;
+    position: absolute;
+    top: 15px;
+    width: 28px;
+    transform: translateY(-50%);
+    z-index: 10;
+	}
+
+	&:before {		
+    left: -1px;
+	}
+
+	&:after {
+		right: -1px;
+	}
+
+	button {
+		position: absolute;
+		z-index: 15;
+	}
+
+	button:first-child {
+		background-image: url('../static/images/icons/seta_esquerda2.png');
+		left: 0;
+	} 
+
+	button:last-child {
+		background-image: url('../static/images/icons/seta_direita2.png');
+		right: 0;
+	} 
+}
+
+.navigator.products.left {
+	button:first-child {
+		opacity:0.35;
+		cursor: not-allowed;
+	}
+}
+
+.navigator.products.right {
+	button:last-child {
+		opacity:0.35;
+		cursor: not-allowed;
+	}
+}
+
+.navigator .dots {
+	bottom: 10px;
+	position: absolute; 
+	width: 100%;
+
+	li {
+		background-color: #d0d0d0;
+		border-radius: 50%;
+		display: inline-block;
+		height: 11px;
+		margin: 0px 5px 0px 5px;
+		pointer-events: initial;
+		width: 11px;
+		
+		&.active {
+			background-color: #eaeaea;
+		}
+
+		a {
+			border-radius: inherit;
+			box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);  
+			cursor: pointer;
+			display: block;
+			height: 100%;
+			overflow: hidden;
+			transition: opacity 0.175s, box-shadow 0.175s;
+			text-indent: -9999px;
+			width: 100%;
+
+			&:hover {
+				opacity:0.8;
+				box-shadow: 0px 0px 6px 1px rgba(0, 0, 0, 0.2);
+			}
+			&:active, &:focus {
+				opacity:0.8;
+				box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.15);
+			}
+		}
+	}
+}

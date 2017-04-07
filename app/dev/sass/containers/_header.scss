@@ -1,0 +1,7 @@
+#app > main > header {
+	display: block;
+	margin: 0 auto;
+	padding: 35px $app-margin 50px $app-margin;
+	position: relative;
+	width: $app-width;
+}

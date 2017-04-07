@@ -1,0 +1,64 @@
+.menu {
+	display: inline-block;
+	vertical-align: middle;
+
+	> * {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.menu	> h1 {
+	> a {
+		background-image: url('../static/images/brand/profite_logo_novo.png');
+		background-repeat: no-repeat;
+		background-size: cover;
+		display: block;
+		height: 62px;
+		overflow: hidden;
+		text-indent: -9999px;
+		width: 235px;
+	}
+}
+
+.menu > ul {
+	margin: 0 ($app-margin + 10) 0 ($app-margin + 10);
+
+	&:before {
+		content: attr(name);
+		display: block;
+		font-size: 20px;
+		font-weight: bold;
+		margin-bottom: 2px;
+	}
+
+	> li {
+		display: inline-block;
+		font-size: 14px;
+
+		> a {
+			position: relative;
+
+			&:after {
+				content:'';
+				background-color: #000000;
+				bottom: 0px;
+				height:1px;
+				left:0;
+				opacity:0;
+				position: absolute;
+				transition: opacity 0.15s ease-out;
+				width:100%; 
+			}
+
+			&:hover:after {
+				opacity:1;
+				transition: opacity 0.15s ease-in 0.12s;
+			}
+		}
+
+		&:not(:last-child):after {
+			content: '\2002' +'-'+'\2002'; 
+		}
+	}
+}

@@ -1,0 +1,209 @@
+.product {
+	display: block;
+	height: 100%;
+	padding: 25px 35px 10px 35px;
+
+	.photos {
+		cursor: pointer;
+		display: block;
+		height: $gallery-product-photo-height;
+		margin: 0 auto;
+		position: relative;
+		width: $gallery-product-photo-width;
+
+		> img {
+			left:0;
+			position: absolute;
+			top:0;
+			&:last-of-type {
+				opacity: 0;
+			}
+		}
+	}
+
+	.bigPhoto {
+		display: none;
+		height: 100%;
+		left:0;
+		opacity:0;
+		position:fixed;
+		top:0;
+		width: 100%;
+		z-index: 20;
+
+		img {
+			height: $gallery-product-zoom-height;
+			left: 50%;
+			position: absolute;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: $gallery-product-zoom-width;
+			z-index: 25;
+		}
+
+		button {
+			&:before {		
+				background-color: rgba(#000000, 0.5);
+				content:'';
+				cursor: initial;
+				height: 100%;
+				left:0;
+				position:fixed;
+				top:0;
+				width: 100%;
+				z-index: 20;
+			}
+
+			span{
+				height: $gallery-product-zoom-height;
+				left: 50%;
+				overflow: hidden;
+				pointer-events: none;
+				position: absolute;
+				text-indent: -9999px;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: $gallery-product-zoom-width;
+				z-index: 30;
+
+				&:before {
+					background-image: url('../static/images/icons/fechar.png');
+					content: '';
+					cursor: pointer;
+					height: 27px;
+					right:25px;
+					top:25px;
+					pointer-events: initial;
+					position: absolute;
+					width: 27px;
+					z-index: 30;
+				}
+			}
+		}
+	}
+
+	figcaption {
+		font-family: 'Arial';
+
+		.title {
+			display: block;
+			font-size: 14px;
+			font-weight: bold;
+			line-height: 20px;
+			height: 50px;
+		}
+
+		.rate {
+			background-image: url('../static/images/icons/estrela.png');
+			background-repeat: repeat;
+			background-size: 21px 18px ;
+			display:block;
+			height: 18px;
+			margin:0 auto 10px auto;
+			text-indent: -9999px;
+			max-width: (21px * 5);
+			
+			@for $i from 1 through 5 {
+				&[data-rate='#{$i}'] {
+					width: (21px * $i);
+				}
+			}
+		}
+
+		.prices{
+			color: #000000;
+			font-size: 14px;
+			height: 50px;
+			margin-bottom: 10px;		
+
+			.oldPrice {
+				color: #636465;
+				font-size: 10.5px;
+				font-style: italic;
+				text-decoration: line-through;
+			}
+
+			.price {
+				font-weight: bold;
+				line-height: 18px;
+				margin-bottom: 5px;
+				span {
+					font-style: italic;
+				}
+			}
+
+			.priceX {
+				font-style: italic;		
+				span {
+					font-weight: bold;
+				}
+			}
+		}
+
+		.buy {
+			background-color: #212121;
+			background-image: url('../static/images/icons/carrinho.png');
+			background-position: 20px center;
+			background-repeat: no-repeat;
+			background-size: 15px 12px;
+			color: #ffffff;
+			display: block;
+			font-family: 'Arial Narrow';
+			font-size: 14px;
+			height: 35px;
+			line-height: 35px;
+			margin:0 auto 10px auto;
+			padding-left: 20px;
+			text-transform: uppercase;
+			transition: all 0.2s ease-out;
+			width: 125px;
+		}
+
+		.discount {
+			background-color: #ffffff;
+			border:1px solid #c7c7c7;
+			display: block;
+			font-size: 10.5px;
+			height:20px;
+			line-height: 18px;
+			margin:0 auto;
+			width: 135px;
+		}
+
+	}
+
+
+	&:hover {
+		background-color: #fac437; 
+		
+		.photos {
+			> img {
+				&:first-of-type {
+					opacity: 0;
+				}
+			 	&:last-of-type {
+					opacity: 1;
+					&:hover {
+						opacity: 0.8;
+					}
+				}
+			}
+		}
+
+		.buy {
+			background-position: 10px center;
+			background-repeat: no-repeat;
+			background-size: 29px 23px;
+			font-size: 16px;
+			padding-left: 30px  + 10px;
+		}
+	}
+
+	&.active {
+		.bigPhoto {
+			display: block;
+			opacity:1;
+			pointer-events: initial;
+		}
+	}
+}
