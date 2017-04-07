@@ -239,6 +239,8 @@ footer {
   top: 0;
   width: 100%;
   transition: opacity 0.315s ease-in; }
+  .banner img + img {
+    display: none; }
   .banner.active {
     opacity: 1;
     pointer-events: initial; }
@@ -621,7 +623,164 @@ footer {
     .search button:active {
       opacity: 0.75; }
 
+@media screen and (max-width: 1060px) {
+  #app > main > header {
+    padding: 35px 0 25px 0;
+    width: 100%; }
+    #app > main > header .menu {
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      width: 640px; }
+      #app > main > header .menu h1 {
+        display: block; }
+        #app > main > header .menu h1 a {
+          margin: 0 auto; }
+      #app > main > header .menu > ul {
+        margin: 0;
+        position: absolute;
+        right: 0;
+        top: 10px; }
+    #app > main > header .countries {
+      display: none; }
+    #app > main > header .search {
+      margin-top: 25px;
+      width: 100%; }
+      #app > main > header .search input[type=search] {
+        border-radius: 0px;
+        font-size: 18px;
+        height: 35px;
+        line-height: 35px;
+        padding-left: 70px;
+        width: 100%; }
+      #app > main > header .search button {
+        border-radius: 0px;
+        height: 35px;
+        left: 20px; }
+  .highlights {
+    height: 233px;
+    min-width: 640px; }
+    .highlights .banner {
+      width: auto;
+      left: 50%;
+      transform: translateX(-50%); }
+      .highlights .banner a img:first-of-type {
+        display: none; }
+        .highlights .banner a img:first-of-type + img {
+          display: block;
+          margin: 0 auto; }
+  .gallery {
+    padding: 0px 30px;
+    width: 700px; }
+    .gallery .productArea > li {
+      width: 16.5%; }
+    .gallery .product {
+      padding: 25px 15px 10px 15px; }
+    .gallery .product .bigPhoto button span,
+    .gallery .product .bigPhoto img {
+      width: 350px;
+      height: 350px; }
+  .navigator .arrows {
+    width: 700px; }
+  .navigator.products .arrows {
+    width: 700px; }
+    .navigator.products .arrows:after, .navigator.products .arrows:before {
+      width: 38px; }
+    .navigator.products .arrows:after {
+      right: -8px; }
+  footer > div {
+    font-size: 12px;
+    padding: 55px 0px 65px 0px;
+    width: 640px; }
+    footer > div dl {
+      margin-right: 15px; }
+    footer > div nav {
+      margin-left: 15px; } }
+
+@media screen and (max-width: 720px) {
+  #app > main > header {
+    padding: 15px 0 5px 0; }
+    #app > main > header .menu {
+      width: 300px; }
+      #app > main > header .menu > h1 {
+        display: inline-block; }
+      #app > main > header .menu > h1 > a {
+        height: 31px;
+        width: 117.5px; }
+      #app > main > header .menu > ul {
+        top: 0px; }
+        #app > main > header .menu > ul:before {
+          font-size: 15px; }
+        #app > main > header .menu > ul > li {
+          display: inline-block;
+          font-size: 11px; }
+  .highlights {
+    height: 35vw;
+    min-width: 300px;
+    margin-bottom: 20px; }
+    .highlights .banner {
+      height: auto;
+      width: 100%; }
+      .highlights .banner a img {
+        height: auto;
+        width: 100%; }
+    .highlights .bannerArea:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .gallery {
+    width: 100%;
+    height: 100vw;
+    padding: 0 17px; }
+    .gallery .productArea > li {
+      width: 25%; }
+    .gallery .product {
+      padding: 15px 2px 5px 2px; }
+    .gallery .product figcaption .title {
+      font-size: 12px;
+      line-height: 15px;
+      height: 35px; }
+    .gallery .product .photos {
+      height: 30vw;
+      width: 100%; }
+    .gallery .product .photos > img {
+      left: 20%;
+      width: 60%;
+      height: auto; }
+    .gallery .product .bigPhoto button span,
+    .gallery .product .bigPhoto img {
+      width: 250px;
+      height: 250px; }
+    .gallery .priceX {
+      font-size: 10px; }
+  .navigator .dots {
+    display: none; }
+  .navigator .arrows {
+    width: 98%; }
+  .navigator.products .arrows {
+    width: 100%; }
+    .navigator.products .arrows:after, .navigator.products .arrows:before {
+      width: 20px; }
+    .navigator.products .arrows:after {
+      right: -3px; }
+  footer > div {
+    font-size: 12px;
+    padding: 35px 0px 65px 0px;
+    width: 100%; }
+    footer > div dl {
+      display: block;
+      margin-right: 0px;
+      text-align: center;
+      margin-bottom: 10px; }
+      footer > div dl dt, footer > div dl dd {
+        text-align: left; }
+    footer > div nav {
+      margin-left: 0px;
+      display: block; }
+      footer > div nav li {
+        display: block;
+        margin: 10px auto; } }
+
 body {
   color: #000000;
-  font-family: 'Open Sans';
-  min-width: 967px; }
+  font-family: 'Open Sans'; }

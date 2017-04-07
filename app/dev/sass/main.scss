@@ -11,12 +11,13 @@
 	'components/menu',
 	'components/navigator',
 	'components/product',
-	'components/search';   
+	'components/search',  
+	'responsive';   
   
 body {
 	color: #000000;
 	font-family: 'Open Sans';	
-	min-width:  $banner-width;
+	// overflow-x: hidden;
 }
 
 

@@ -7,7 +7,9 @@
 	top:0;
 	width: 100%;
 	transition: opacity 0.315s ease-in;
-
+	img + img {
+		display: none;
+	}
 	&.active {
 		opacity: 1;
 		pointer-events: initial;
